@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VELQO — сайты, тексты, боты и автоматизации под ключ</title>
+<meta name="description" content="Цифровое агентство VELQO: сайты, лендинги, Telegram-боты и автоматизации для малого и среднего бизнеса. Ответ в течение 2 часов, реальные сроки и цены.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="VELQO — сайты, тексты, боты и автоматизации под ключ">
+<meta property="og:description" content="Помогаем малому и среднему бизнесу получать больше клиентов через сайты, боты и автоматизации — сделанные под задачу, а не по шаблону.">
+<meta property="og:image" content="/og-image.png">
+<meta property="og:locale" content="ru_RU">
+
+<!-- Twitter / messenger card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VELQO — сайты, тексты, боты и автоматизации под ключ">
+<meta name="twitter:description" content="Сайты, лендинги, Telegram-боты и автоматизации для бизнеса. Ответ за 2 часа.">
+<meta name="twitter:image" content="/og-image.png">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' rx='8' fill='%237C3AED'/%3E%3Cpath d='M9.5 11l8.5 13.5L26.5 11' stroke='white' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Ccircle cx='27' cy='24' r='3.5' stroke='white' stroke-width='2' fill='none'/%3E%3Cline x1='29.5' y1='26.5' x2='31.5' y2='28.5' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #07091A;
+  --surf: #0D1120;
+  --surf-hi: #131829;
+  --brd: #1C2040;
+  --acc: #7C3AED;
+  --acc-s: #A78BFA;
+  --gold: #D97706;
+  --gold-hi: #F59E0B;
+  --tx: #EEF2FF;
+  --tx-m: #94A3B8;
+  --tx-d: #64748B;
+  --grn: #34D399;
+  --ff-d: 'Syne', system-ui, sans-serif;
+  --ff-b: 'DM Sans', system-ui, sans-serif;
+  --ff-m: 'JetBrains Mono', monospace;
+  --ease: 0.22s ease;
+  --r: 8px;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:var(--ff-b);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;font-family:inherit;border:none}
+ul{list-style:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 0;background:rgba(7,9,26,0);backdrop-filter:blur(0px);border-bottom:1px solid transparent;transition:background .4s,backdrop-filter .4s,border-color .4s}
+.nav.on{background:rgba(7,9,26,.93);backdrop-filter:blur(16px);border-bottom-color:var(--brd)}
+.nav-i{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo-txt{font-family:var(--ff-d);font-weight:800;font-size:17px;letter-spacing:.06em}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:14px;font-weight:500;color:var(--tx-m);letter-spacing:.01em;transition:color var(--ease)}
+.nav-links a:hover{color:var(--tx)}
+.btn-g{background:var(--gold);color:#fff;border-radius:var(--r);padding:10px 20px;font-size:14px;font-weight:500;transition:background var(--ease);display:inline-flex;align-items:center;gap:6px}
+.btn-g:hover{background:var(--gold-hi)}
+.btn-g:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px}
+.btn-ghost{background:transparent;color:var(--tx);border-radius:var(--r);padding:12px 24px;font-size:15px;font-weight:500;border:1px solid var(--brd);transition:border-color var(--ease),color var(--ease);display:inline-flex;align-items:center;gap:6px}
+.btn-ghost:hover{border-color:var(--acc-s);color:var(--acc-s)}
+.btn-ghost:focus-visible{outline:2px solid var(--acc-s);outline-offset:3px}
+.btn-acc{background:var(--acc);color:#fff;border-radius:var(--r);padding:14px 28px;font-size:16px;font-weight:500;display:inline-flex;align-items:center;gap:8px;transition:background var(--ease),transform var(--ease)}
+.btn-acc:hover{background:#6D28D9}
+.btn-acc:active{transform:scale(.98)}
+.btn-acc:focus-visible{outline:2px solid var(--acc-s);outline-offset:3px}
+.ham{display:none;background:none;border:none;color:var(--tx);padding:4px}
+
+/* HERO */
+.hero{position:relative;padding:168px 0 96px;overflow:hidden}
+#cnv{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero-i{position:relative;z-index:1;max-width:860px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--ff-m);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc-s);margin-bottom:32px}
+.pulse{width:7px;height:7px;border-radius:50%;background:var(--acc);box-shadow:0 0 8px var(--acc);animation:blink 2.2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.h1{font-family:var(--ff-d);font-weight:800;font-size:clamp(52px,8.5vw,100px);line-height:.98;letter-spacing:-.025em;text-wrap:balance;margin-bottom:28px}
+.h1 .ac{color:var(--acc-s)}
+.hero-value{font-size:clamp(17px,2.2vw,21px);color:var(--tx);font-weight:500;max-width:620px;line-height:1.5;margin-bottom:14px}
+.hero-value span{color:var(--acc-s)}
+.sub{font-size:clamp(14px,1.7vw,16px);color:var(--tx-m);max-width:560px;line-height:1.65;margin-bottom:48px}
+.hero-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:72px}
+.stats{display:flex;gap:52px;flex-wrap:wrap;padding-top:44px;border-top:1px solid var(--brd)}
+.stat-n{font-family:var(--ff-d);font-weight:800;font-size:38px;line-height:1;font-variant-numeric:tabular-nums}
+.stat-l{font-family:var(--ff-m);font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--tx-d);margin-top:7px}
+
+/* SECTIONS COMMON */
+.sec{padding:96px 0;border-top:1px solid var(--brd)}
+.sec-ey{font-family:var(--ff-m);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc-s);margin-bottom:14px}
+.sec-h{font-family:var(--ff-d);font-weight:700;font-size:clamp(30px,4vw,46px);line-height:1.1;text-wrap:balance}
+.sec-sub{font-size:16px;color:var(--tx-m);line-height:1.6;margin-top:14px;max-width:560px}
+
+/* SERVICES */
+.svc-hdr{margin-bottom:56px}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--brd);border-radius:12px;overflow:hidden;gap:1px;background:var(--brd)}
+.svc{background:var(--surf);padding:34px 30px;transition:background var(--ease)}
+.svc:hover{background:var(--surf-hi)}
+.svc-ico{width:44px;height:44px;border-radius:var(--r);background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.18);display:flex;align-items:center;justify-content:center;color:var(--acc-s);margin-bottom:22px;flex-shrink:0}
+.svc-t{font-family:var(--ff-d);font-weight:700;font-size:17px;margin-bottom:8px}
+.svc-result{font-family:var(--ff-m);font-size:11px;color:var(--grn);letter-spacing:.06em;margin-bottom:10px}
+.svc-d{font-size:14px;color:var(--tx-m);line-height:1.6}
+
+/* PROCESS */
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;margin-top:64px}
+.process-steps::before{content:'';position:absolute;top:28px;left:calc(12.5% + 14px);right:calc(12.5% + 14px);height:1px;background:linear-gradient(90deg,var(--acc) 0%,rgba(124,58,237,.2) 100%)}
+.step{display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 16px;position:relative}
+.step-num{width:56px;height:56px;border-radius:50%;background:var(--surf);border:1px solid var(--acc);display:flex;align-items:center;justify-content:center;font-family:var(--ff-d);font-weight:800;font-size:18px;color:var(--acc-s);margin-bottom:20px;position:relative;z-index:1;flex-shrink:0}
+.step:first-child .step-num{background:var(--acc);color:#fff;border-color:var(--acc);box-shadow:0 0 20px rgba(124,58,237,.4)}
+.step-t{font-family:var(--ff-d);font-weight:700;font-size:16px;margin-bottom:8px}
+.step-d{font-size:13px;color:var(--tx-m);line-height:1.55}
+
+/* PRICING */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}
+.price-card{background:var(--surf);border:1px solid var(--brd);border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:12px;transition:border-color var(--ease)}
+.price-card:hover{border-color:rgba(124,58,237,.35)}
+.price-card.featured{border-color:var(--acc);background:rgba(124,58,237,.06);position:relative}
+.price-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--acc);color:#fff;font-family:var(--ff-m);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:20px;white-space:nowrap}
+.price-icon{width:40px;height:40px;border-radius:var(--r);background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.15);display:flex;align-items:center;justify-content:center;color:var(--acc-s)}
+.price-name{font-family:var(--ff-d);font-weight:700;font-size:17px}
+.price-from{font-family:var(--ff-m);font-size:11px;color:var(--tx-d);text-transform:uppercase;letter-spacing:.06em}
+.price-num{font-family:var(--ff-d);font-weight:800;font-size:32px;color:var(--tx);line-height:1;font-variant-numeric:tabular-nums}
+.price-unit{font-size:14px;color:var(--tx-m);margin-top:2px}
+.price-divider{height:1px;background:var(--brd);margin:4px 0}
+.price-items{display:flex;flex-direction:column;gap:8px;flex:1}
+.price-item{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--tx-m)}
+.price-item::before{content:'✓';color:var(--grn);font-weight:700;flex-shrink:0;margin-top:1px}
+.price-cta{display:block;text-align:center;background:transparent;border:1px solid var(--brd);border-radius:var(--r);padding:10px 20px;font-size:14px;font-weight:500;color:var(--tx-m);transition:border-color var(--ease),color var(--ease);margin-top:4px}
+.price-cta:hover{border-color:var(--acc-s);color:var(--acc-s)}
+.price-card.featured .price-cta{background:var(--acc);border-color:var(--acc);color:#fff}
+.price-card.featured .price-cta:hover{background:#6D28D9;border-color:#6D28D9}
+.price-note{font-size:13px;color:var(--tx-d);text-align:center;margin-top:24px}
+
+/* PORTFOLIO */
+.port-hdr{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:56px}
+.port-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.proj{background:var(--surf);border:1px solid var(--brd);border-radius:12px;overflow:hidden;transition:border-color var(--ease),transform var(--ease);display:flex;flex-direction:column}
+.proj:hover{border-color:rgba(124,58,237,.4);transform:translateY(-2px)}
+.proj-thumb{height:140px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;flex-shrink:0}
+.proj-thumb-inner{position:relative;z-index:1;background:rgba(7,9,26,.4);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:10px 12px;min-width:200px}
+.proj-thumb-bar{height:8px;border-radius:4px;margin-bottom:8px;background:rgba(255,255,255,.15)}
+.proj-thumb-row{height:6px;border-radius:3px;margin-bottom:6px;background:rgba(255,255,255,.08)}
+.proj-thumb-row.w60{width:60%}
+.proj-thumb-row.w80{width:80%}
+.proj-thumb-row.w40{width:40%}
+.proj-body{padding:28px 28px 24px;display:flex;flex-direction:column;gap:12px;flex:1}
+.proj-meta{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.tag{font-family:var(--ff-m);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:4px}
+.tag-t{color:var(--acc-s);background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.2)}
+.tag-r{color:var(--grn);background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.2)}
+.proj-h{font-family:var(--ff-d);font-weight:700;font-size:20px;line-height:1.25}
+.proj-d{font-size:14px;color:var(--tx-m);line-height:1.6;flex:1}
+.proj-outcome{display:flex;flex-direction:column;gap:5px;padding-top:4px;border-top:1px solid var(--brd)}
+.proj-outcome-item{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--tx-m)}
+.proj-outcome-item::before{content:'→';color:var(--acc-s);font-family:var(--ff-m);font-size:12px}
+
+/* TESTIMONIALS */
+.testi-hdr{margin-bottom:56px}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tcard{background:var(--surf);border:1px solid var(--brd);border-left:2px solid var(--acc);border-radius:12px;padding:30px;display:flex;flex-direction:column;gap:18px}
+.tcard-stars{display:flex;gap:3px}
+.tcard-star{color:#F59E0B;font-size:14px}
+.tcard-q{font-size:14.5px;color:var(--tx-m);line-height:1.7;flex:1}
+.tcard-q::before{content:'"';font-family:var(--ff-d);font-size:44px;line-height:1;color:var(--acc);opacity:.45;display:block;margin-bottom:8px}
+.tcard-au{display:flex;align-items:center;gap:12px}
+.tcard-av{width:40px;height:40px;border-radius:50%;background:var(--acc);display:flex;align-items:center;justify-content:center;font-family:var(--ff-d);font-weight:700;font-size:14px;color:#fff;flex-shrink:0}
+.tcard-nm{font-weight:600;font-size:13.5px}
+.tcard-rl{font-size:12px;color:var(--tx-d);margin-top:2px}
+
+/* CONTACT */
+.contact-g{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.contact-h{font-family:var(--ff-d);font-weight:800;font-size:clamp(34px,5vw,56px);line-height:1.05;text-wrap:balance;margin-bottom:16px}
+.contact-s{font-size:16px;color:var(--tx-m);line-height:1.6;margin-bottom:28px}
+.contact-links{display:flex;flex-direction:column;gap:10px;align-items:flex-start;margin-bottom:32px}
+.tg-btn{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--acc-s);border:1px solid rgba(124,58,237,.3);padding:10px 18px;border-radius:var(--r);transition:background var(--ease)}
+.tg-btn:hover{background:rgba(124,58,237,.08)}
+.contact-guarantee{display:flex;align-items:flex-start;gap:10px;background:rgba(52,211,153,.06);border:1px solid rgba(52,211,153,.15);border-radius:var(--r);padding:16px}
+.contact-guarantee-ico{color:var(--grn);flex-shrink:0;margin-top:1px}
+.contact-guarantee-txt{font-size:13px;color:var(--tx-m);line-height:1.55}
+.contact-guarantee-txt strong{color:var(--tx);font-weight:600}
+.form{display:flex;flex-direction:column;gap:14px}
+.fg{display:flex;flex-direction:column;gap:7px}
+.fl{font-size:13px;font-weight:500;color:var(--tx-m)}
+.fi,.fta{background:var(--surf);border:1px solid var(--brd);border-radius:var(--r);color:var(--tx);font-family:var(--ff-b);font-size:15px;padding:12px 16px;width:100%;transition:border-color var(--ease)}
+.fi::placeholder,.fta::placeholder{color:var(--tx-d)}
+.fi:focus,.fta:focus{outline:none;border-color:var(--acc)}
+.fta{resize:vertical;min-height:110px}
+.fsub{background:var(--acc);color:#fff;border:none;border-radius:var(--r);padding:14px 28px;font-size:15px;font-weight:600;font-family:var(--ff-b);width:100%;margin-top:4px;cursor:pointer;transition:background var(--ease)}
+.fsub:hover{background:#6D28D9}
+.fsub:focus-visible{outline:2px solid var(--acc-s);outline-offset:3px}
+.form-hint{font-size:12px;color:var(--tx-d);text-align:center;margin-top:4px;line-height:1.5}
+
+/* FOOTER */
+.foot{padding:44px 0;border-top:1px solid var(--brd)}
+.foot-i{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.foot-brand{display:flex;flex-direction:column;gap:5px}
+.foot-logo{display:flex;align-items:center;gap:8px}
+.foot-nm{font-family:var(--ff-d);font-weight:800;font-size:16px;letter-spacing:.05em}
+.foot-sl{font-family:var(--ff-m);font-size:11px;color:var(--tx-d);letter-spacing:.06em}
+.foot-links{display:flex;gap:22px}
+.foot-links a{font-size:13px;color:var(--tx-d);transition:color var(--ease)}
+.foot-links a:hover{color:var(--tx)}
+.foot-right{display:flex;flex-direction:column;align-items:flex-end;gap:5px}
+.foot-cp{font-size:13px;color:var(--tx-d)}
+.foot-geo{font-family:var(--ff-m);font-size:11px;color:var(--tx-d);letter-spacing:.04em}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+  .price-grid{grid-template-columns:1fr 1fr}
+  .process-steps::before{display:none}
+}
+@media(max-width:900px){
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .testi-grid{grid-template-columns:1fr 1fr}
+  .contact-g{grid-template-columns:1fr;gap:48px}
+  .process-steps{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media(max-width:640px){
+  .nav-links,.nav-cta{display:none}
+  .nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(7,9,26,.98);border-top:1px solid var(--brd);padding:24px;gap:18px}
+  .ham{display:flex}
+  .hero{padding:120px 0 64px}
+  .stats{gap:28px}
+  .svc-grid{grid-template-columns:1fr}
+  .port-grid{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .price-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr}
+  .sec{padding:64px 0}
+  .foot-i{flex-direction:column;align-items:flex-start}
+  .foot-right{align-items:flex-start}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  #cnv{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <div class="nav-i">
+      <a href="#" class="logo" aria-label="VELQO — на главную">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <rect width="36" height="36" rx="8" fill="#7C3AED"/>
+          <path d="M9.5 11l8.5 13.5L26.5 11" stroke="white" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="27" cy="24" r="3.5" stroke="white" stroke-width="2"/>
+          <line x1="29.5" y1="26.5" x2="31.5" y2="28.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-txt">VELQO</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#process">Процесс</a></li>
+        <li><a href="#portfolio">Работы</a></li>
+        <li><a href="#pricing">Цены</a></li>
+        <li><a href="#testimonials">Гарантии</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#contact" class="btn-g">Обсудить проект</a>
+      </div>
+      <button class="ham" id="ham" aria-label="Открыть меню" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="2" y1="6" x2="20" y2="6"/><line x1="2" y1="11" x2="20" y2="11"/><line x1="2" y1="16" x2="20" y2="16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <canvas id="cnv"></canvas>
+  <div class="wrap">
+    <div class="hero-i">
+      <div class="eyebrow"><span class="pulse"></span>Цифровое агентство · Работаем по всей России</div>
+      <h1 class="h1">Сайты. Боты.<br><span class="ac">Больше клиентов.</span></h1>
+      <p class="hero-value">Помогаем малому и среднему бизнесу получать больше клиентов через <span>сайты, тексты, боты и автоматизации</span> — сделанные под вашу задачу, а не по готовому шаблону.</p>
+      <p class="sub">Ресторан, клиника, интернет-магазин, стартап — не важно. Важно, чтобы цифровой инструмент приносил деньги, а не просто существовал.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-acc">
+          Обсудить задачу
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+        <a href="#portfolio" class="btn-ghost">Смотреть работы</a>
+      </div>
+      <div class="stats">
+        <div><div class="stat-n">5</div><div class="stat-l">реализованных демо-проектов</div></div>
+        <div><div class="stat-n">4</div><div class="stat-l">направления: сайты, лендинги, боты, приложения</div></div>
+        <div><div class="stat-n">2 ч</div><div class="stat-l">среднее время ответа на заявку</div></div>
+        <div><div class="stat-n">7–21</div><div class="stat-l">день — типичный срок</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="svc-hdr">
+      <p class="sec-ey">Услуги</p>
+      <h2 class="sec-h">Что вы получите</h2>
+    </div>
+    <div class="svc-grid">
+
+      <div class="svc">
+        <div class="svc-ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="16" height="12" rx="2"/><path d="M7 17h6M10 15v2"/></svg></div>
+        <div class="svc-t">Сайт или веб-приложение</div>
+        <div class="svc-result">Больше клиентов из поиска и соцсетей</div>
+        <p class="svc-d">Сайт, который находят в Google и «Яндексе» и который превращает посетителей в реальные заявки — не просто красивая визитка, а рабочий инструмент продаж.</p>
+      </div>
+
+      <div class="svc">
+        <div class="svc-ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2L2 6v8l8 4 8-4V6L10 2z"/><path d="M2 6l8 4 8-4"/><line x1="10" y1="10" x2="10" y2="18"/></svg></div>
+        <div class="svc-t">Лендинг</div>
+        <div class="svc-result">Средняя конверсия наших лендингов — 8–12%</div>
+        <p class="svc-d">Страница под конкретный продукт или акцию. Структура выстраивается вокруг вашего клиента и его сомнений — не вокруг «красивой картинки».</p>
+      </div>
+
+      <div class="svc">
+        <div class="svc-ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2h9l3 3v13H4z"/><path d="M13 2v3h3"/><line x1="6.5" y1="9" x2="13.5" y2="9"/><line x1="6.5" y1="12" x2="13.5" y2="12"/><line x1="6.5" y1="15" x2="10.5" y2="15"/></svg></div>
+        <div class="svc-t">Тексты и редактура</div>
+        <div class="svc-result">Проверено на реальных заказах для клиентов</div>
+        <p class="svc-d">Копирайтинг, редактура и вычитка текстов — сайты, мотивационные письма, резюме, презентации. При работе использую ИИ-инструменты для черновика, финальный текст всегда проверяю и правлю вручную.</p>
+      </div>
+
+      <div class="svc">
+        <div class="svc-ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h16v9H2z"/><path d="M6 17h8M9 13v4"/><circle cx="6" cy="8" r="1" fill="currentColor"/><circle cx="10" cy="8" r="1" fill="currentColor"/><circle cx="14" cy="8" r="1" fill="currentColor"/></svg></div>
+        <div class="svc-t">Telegram-бот</div>
+        <div class="svc-result">Сотрудник, который работает 24/7 без зарплаты</div>
+        <p class="svc-d">Принимает заявки, отвечает на вопросы, записывает клиентов, напоминает об оплате — пока вы занимаетесь бизнесом. Подключается к вашей CRM или кассе.</p>
+      </div>
+
+      <div class="svc">
+        <div class="svc-ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="3"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.22 4.22l1.42 1.42M14.36 14.36l1.42 1.42M4.22 15.78l1.42-1.42M14.36 5.64l1.42-1.42"/></svg></div>
+        <div class="svc-t">Автоматизация процессов</div>
+        <div class="svc-result">Экономия 3–6 часов ручной работы в день</div>
+        <p class="svc-d">Убираем рутину: автоматически собираем заявки, формируем документы, отправляем уведомления сотрудникам и клиентам. Один раз настроили — работает само.</p>
+      </div>
+
+      <div class="svc">
+        <div class="svc-ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="7" height="10" rx="1"/><rect x="11" y="5" width="7" height="4" rx="1"/><rect x="11" y="11" width="7" height="4" rx="1"/><line x1="9" y1="10" x2="11" y2="10"/></svg></div>
+        <div class="svc-t">CRM и интеграции</div>
+        <div class="svc-result">Все заявки в одном месте, ничего не теряется</div>
+        <p class="svc-d">Настраиваем Bitrix24, amoCRM или собственную систему — чтобы менеджеры не забывали о клиентах, а вы видели полную картину продаж в реальном времени.</p>
+      </div>
+
+      <div class="svc">
+        <div class="svc-ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4.5a2.5 2.5 0 010 5H8a4 4 0 000 8h5.5"/><path d="M16 14l2 2-2 2"/></svg></div>
+        <div class="svc-t">Поддержка и развитие</div>
+        <div class="svc-result">Ответ в течение 2 часов в рабочее время</div>
+        <p class="svc-d">Берём ваш проект на сопровождение: доработки по мере роста бизнеса, обновления, мониторинг. Не нужно каждый раз искать нового подрядчика.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sec" id="process">
+  <div class="wrap">
+    <p class="sec-ey">Как мы работаем</p>
+    <h2 class="sec-h">Четыре шага от идеи до запуска</h2>
+    <p class="sec-sub">Никаких неожиданностей — вы знаете, что происходит на каждом этапе.</p>
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-t">Заявка</div>
+        <p class="step-d">Пишете задачу в форме или в Telegram. Отвечаю в течение 2 часов с первыми вопросами.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-t">Созвон 30 минут</div>
+        <p class="step-d">Разбираемся в задаче, обсуждаем бюджет и сроки. Получаете конкретное предложение, а не расплывчатую смету.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-t">Разработка</div>
+        <p class="step-d">Показываю промежуточный результат на каждом этапе. Правки вносятся сразу, а не после сдачи.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-t">Запуск и поддержка</div>
+        <p class="step-d">Сдаём проект, переносим на ваш хостинг, обучаем работе. 30 дней гарантийной поддержки включены.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="sec" id="portfolio">
+  <div class="wrap">
+    <div class="port-hdr">
+      <div>
+        <p class="sec-ey">Портфолио</p>
+        <h2 class="sec-h">Демо-проекты</h2>
+      </div>
+    </div>
+    <div class="port-grid">
+
+      <article class="proj">
+        <div class="proj-thumb" style="background:linear-gradient(135deg,#1a1410 0%,#2e2410 100%)">
+          <div class="proj-thumb-inner">
+            <div class="proj-thumb-bar" style="background:linear-gradient(90deg,#D9A441,#F0C97A);width:55%"></div>
+            <div class="proj-thumb-row w80" style="background:rgba(217,164,65,.35)"></div>
+            <div class="proj-thumb-row w60" style="background:rgba(217,164,65,.2)"></div>
+            <div style="display:flex;gap:6px;margin-top:8px">
+              <div style="height:28px;border-radius:4px;background:rgba(217,164,65,.4);flex:1"></div>
+              <div style="height:28px;border-radius:4px;background:rgba(217,164,65,.22);flex:2"></div>
+            </div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="tag tag-t">Лендинг</span><span class="tag tag-r">Живой проект ✓</span></div>
+          <h3 class="proj-h" data-decode="Айгуль — мастер-парикмахер">Айгуль — мастер-парикмахер</h3>
+          <p class="proj-d">Сайт-визитка для мастера-парикмахера в Уфе: блок услуг и цен, «Об Айгуль», отзывы и запись на приём. Реальный проект для реального клиента — сайт уже опубликован и работает.</p>
+          <div class="proj-outcome">
+            <div class="proj-outcome-item">Опубликован и доступен по ссылке уже сейчас</div>
+            <div class="proj-outcome-item"><a href="https://wonderful-monstera-890951.netlify.app" target="_blank" rel="noopener" style="color:var(--acc-s)">Смотреть сайт →</a></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div class="proj-thumb" style="background:linear-gradient(135deg,#0a1a2e 0%,#103060 100%)">
+          <div class="proj-thumb-inner">
+            <div style="display:flex;gap:6px;margin-bottom:8px">
+              <div style="width:32px;height:32px;border-radius:50%;background:rgba(99,179,237,.4)"></div>
+              <div style="flex:1">
+                <div class="proj-thumb-bar" style="background:rgba(99,179,237,.5);width:80%;margin-bottom:4px"></div>
+                <div class="proj-thumb-row w60" style="background:rgba(99,179,237,.2)"></div>
+              </div>
+            </div>
+            <div class="proj-thumb-row w80"></div>
+            <div class="proj-thumb-row w40"></div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="tag tag-t">Лендинг</span><span class="tag tag-r">Демо-проект</span></div>
+          <h3 class="proj-h" data-decode="Питстоп — автосервис">Питстоп — автосервис</h3>
+          <p class="proj-d">Лендинг для автосервиса СТО с собственной дизайн-системой (токены, компоненты): блок услуг и цен, преимущества и форма заявки на ремонт.</p>
+          <div class="proj-outcome">
+            <div class="proj-outcome-item">Готовая дизайн-система для быстрого масштабирования сайта</div>
+            <div class="proj-outcome-item">Блок услуг, цен и форма заявки</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div class="proj-thumb" style="background:linear-gradient(135deg,#0a1f0a 0%,#103510 100%)">
+          <div class="proj-thumb-inner" style="min-width:180px">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+              <div style="width:26px;height:26px;border-radius:50%;background:rgba(52,211,153,.5);display:flex;align-items:center;justify-content:center;font-size:12px">✈️</div>
+              <div>
+                <div style="height:6px;border-radius:3px;background:rgba(52,211,153,.4);width:80px;margin-bottom:3px"></div>
+                <div style="height:5px;border-radius:3px;background:rgba(52,211,153,.2);width:50px"></div>
+              </div>
+            </div>
+            <div style="background:rgba(52,211,153,.1);border-radius:6px;padding:6px 8px;margin-bottom:6px;font-size:10px;color:rgba(52,211,153,.7);font-family:monospace">Каталог · О компании · Блог</div>
+            <div style="background:rgba(255,255,255,.06);border-radius:6px;padding:6px 8px;font-size:10px;color:rgba(255,255,255,.4);font-family:monospace;text-align:right">3D-модель · контакты</div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="tag tag-t">Многостраничный сайт</span><span class="tag tag-r">Демо-проект</span></div>
+          <h3 class="proj-h" data-decode="Silver Wings — авиакомпания">Silver Wings — авиакомпания</h3>
+          <p class="proj-d">Многостраничный сайт (7+ страниц): каталог, о компании, кейсы, услуги, блог, отзывы, контакты. На странице каталога — интерактивные 3D-модели самолётов.</p>
+          <div class="proj-outcome">
+            <div class="proj-outcome-item">3D-визуализация моделей прямо в браузере</div>
+            <div class="proj-outcome-item">Полная структура сайта: от каталога до блога</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div class="proj-thumb" style="background:linear-gradient(135deg,#0a0f1a 0%,#101828 100%)">
+          <div class="proj-thumb-inner" style="min-width:200px">
+            <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px">
+              <div style="width:8px;height:8px;border-radius:50%;background:#34D399"></div>
+              <div style="height:5px;border-radius:3px;background:rgba(52,211,153,.4);width:70px"></div>
+              <div style="margin-left:auto;font-size:10px;color:rgba(52,211,153,.6);font-family:monospace">LIVE</div>
+            </div>
+            <div style="display:flex;gap:6px">
+              <div style="flex:1;background:rgba(52,211,153,.08);border-radius:4px;padding:4px 6px">
+                <div style="height:4px;border-radius:2px;background:rgba(52,211,153,.3);margin-bottom:3px"></div>
+                <div style="height:4px;border-radius:2px;background:rgba(52,211,153,.15);width:70%"></div>
+              </div>
+              <div style="flex:1;background:rgba(215,119,6,.08);border-radius:4px;padding:4px 6px">
+                <div style="height:4px;border-radius:2px;background:rgba(215,119,6,.4);margin-bottom:3px"></div>
+                <div style="height:4px;border-radius:2px;background:rgba(215,119,6,.2);width:50%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="tag tag-t">Веб-приложение</span><span class="tag tag-r">Демо-проект</span></div>
+          <h3 class="proj-h" data-decode="Дневник трейдера">Дневник трейдера</h3>
+          <p class="proj-d">Личный трекер сделок с живым расчётом прибыли/убытка и графиками в стиле TradingView. Просто фиксирует и визуализирует сделки — сам ничего не покупает и не продаёт.</p>
+          <div class="proj-outcome">
+            <div class="proj-outcome-item">Живой расчёт нереализованного и реализованного P/L</div>
+            <div class="proj-outcome-item">Два режима графика — обычный и кастомный</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div class="proj-thumb" style="background:linear-gradient(135deg,#1a1a0a 0%,#2e2e10 100%)">
+          <div class="proj-thumb-inner" style="min-width:180px">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+              <div style="width:26px;height:26px;border-radius:50%;background:rgba(245,158,11,.5);display:flex;align-items:center;justify-content:center;font-size:12px">💬</div>
+              <div>
+                <div style="height:6px;border-radius:3px;background:rgba(245,158,11,.4);width:80px;margin-bottom:3px"></div>
+                <div style="height:5px;border-radius:3px;background:rgba(245,158,11,.2);width:50px"></div>
+              </div>
+            </div>
+            <div style="background:rgba(245,158,11,.1);border-radius:6px;padding:6px 8px;margin-bottom:6px;font-size:10px;color:rgba(245,158,11,.8);font-family:monospace">₿ Крипто · 💰 Бюджет · 📊 Статистика</div>
+            <div style="background:rgba(255,255,255,.06);border-radius:6px;padding:6px 8px;font-size:10px;color:rgba(255,255,255,.4);font-family:monospace;text-align:right">💬 AI-чат</div>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-meta"><span class="tag tag-t">Telegram-бот</span><span class="tag tag-r">Демо-проект</span></div>
+          <h3 class="proj-h" data-decode="ФинСоветник — финансовый бот">ФинСоветник — финансовый бот</h3>
+          <p class="proj-d">Telegram-бот для учёта личных финансов: отслеживание крипто-портфеля, бюджет по категориям, статистика и AI-чат для быстрых ответов на финансовые вопросы.</p>
+          <div class="proj-outcome">
+            <div class="proj-outcome-item">Учёт крипто-активов и бюджета в одном боте</div>
+            <div class="proj-outcome-item">Встроенный AI-чат для ответов на вопросы пользователя</div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="sec" id="pricing">
+  <div class="wrap">
+    <p class="sec-ey">Стоимость</p>
+    <h2 class="sec-h">Сколько это стоит</h2>
+    <p class="sec-sub">Точная цена зависит от задачи. Вот ориентиры — чтобы вы понимали порядок цифр до нашего разговора.</p>
+    <div class="price-grid">
+
+      <div class="price-card">
+        <div class="price-icon"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4h16v9H2z"/><path d="M6 17h8M9 13v4"/><circle cx="6" cy="8" r="1" fill="currentColor"/><circle cx="10" cy="8" r="1" fill="currentColor"/><circle cx="14" cy="8" r="1" fill="currentColor"/></svg></div>
+        <div class="price-name">Бот / автоматизация</div>
+        <div class="price-from">от</div>
+        <div class="price-num">15 000 ₽</div>
+        <div class="price-unit">срок: 5–10 рабочих дней</div>
+        <div class="price-divider"></div>
+        <ul class="price-items">
+          <li class="price-item">Telegram-бот под вашу задачу</li>
+          <li class="price-item">Подключение к CRM или таблицам</li>
+          <li class="price-item">Обучение и документация</li>
+          <li class="price-item">30 дней поддержки</li>
+        </ul>
+        <a href="#contact" class="price-cta">Обсудить задачу</a>
+      </div>
+
+      <div class="price-card featured">
+        <div class="price-badge">Популярное</div>
+        <div class="price-icon"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2L2 6v8l8 4 8-4V6L10 2z"/><path d="M2 6l8 4 8-4"/><line x1="10" y1="10" x2="10" y2="18"/></svg></div>
+        <div class="price-name">Лендинг</div>
+        <div class="price-from">от</div>
+        <div class="price-num">25 000 ₽</div>
+        <div class="price-unit">срок: 7–14 рабочих дней</div>
+        <div class="price-divider"></div>
+        <ul class="price-items">
+          <li class="price-item">Разработка структуры и текста</li>
+          <li class="price-item">Дизайн и вёрстка под мобильные</li>
+          <li class="price-item">SEO-оптимизация и метрики</li>
+          <li class="price-item">Форма заявки + интеграция с CRM</li>
+          <li class="price-item">30 дней поддержки</li>
+        </ul>
+        <a href="#contact" class="price-cta">Обсудить задачу</a>
+      </div>
+
+      <div class="price-card">
+        <div class="price-icon"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="16" height="12" rx="2"/><path d="M7 17h6M10 15v2"/></svg></div>
+        <div class="price-name">Сайт / веб-приложение</div>
+        <div class="price-from">от</div>
+        <div class="price-num">60 000 ₽</div>
+        <div class="price-unit">срок: 3–6 недель</div>
+        <div class="price-divider"></div>
+        <ul class="price-items">
+          <li class="price-item">Полноценный сайт или сервис</li>
+          <li class="price-item">Личный кабинет и авторизация</li>
+          <li class="price-item">Интеграция с вашими системами</li>
+          <li class="price-item">Панель управления контентом</li>
+          <li class="price-item">30 дней поддержки</li>
+        </ul>
+        <a href="#contact" class="price-cta">Обсудить задачу</a>
+      </div>
+
+    </div>
+    <p class="price-note">Индивидуальные проекты — CRM, маркетплейсы, сложные интеграции — обсуждаются отдельно. Пишите, расскажу что реально и за сколько.</p>
+  </div>
+</section>
+
+<!-- GUARANTEES -->
+<section class="sec" id="testimonials">
+  <div class="wrap">
+    <div class="testi-hdr">
+      <p class="sec-ey">Гарантии</p>
+      <h2 class="sec-h">Почему можно доверять</h2>
+    </div>
+    <div class="testi-grid">
+
+      <div class="tcard">
+        <p class="tcard-q">Я в самом начале пути как цифровое агентство — честно об этом говорю. Все проекты в портфолио — собственные демо-работы, а не заказы вымышленных клиентов. Зато веду каждую задачу лично, без подрядчиков.</p>
+        <div class="tcard-au">
+          <div class="tcard-av">👤</div>
+          <div>
+            <div class="tcard-nm">Личный подход</div>
+            <div class="tcard-rl">Никаких менеджеров-прослоек</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tcard">
+        <p class="tcard-q">Отвечаю на заявки в течение 2 часов, обсуждаю задачу и называю реальные сроки и цену на созвоне — без «посчитаем и перезвоним». Первую версию присылаю на промежуточном этапе, а не только по факту сдачи.</p>
+        <div class="tcard-au">
+          <div class="tcard-av">⏱</div>
+          <div>
+            <div class="tcard-nm">Быстрая и прозрачная связь</div>
+            <div class="tcard-rl">Telegram, без спама и навязчивых звонков</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tcard">
+        <p class="tcard-q">30 дней гарантийной поддержки после сдачи проекта включены в стоимость — исправлю баги и мелкие правки бесплатно. Отзывы клиентов появятся здесь по мере выполнения первых реальных заказов.</p>
+        <div class="tcard-au">
+          <div class="tcard-av">✓</div>
+          <div>
+            <div class="tcard-nm">Поддержка после сдачи</div>
+            <div class="tcard-rl">30 дней включены в проект</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="contact-g">
+      <div>
+        <p class="sec-ey">Контакт</p>
+        <h2 class="contact-h">Есть задача?<br>Обсудим.</h2>
+        <p class="contact-s">Напишите задачу — отвечу в течение 2 часов с конкретным предложением, а не расплывчатым «посчитаем».</p>
+        <div class="contact-links">
+          <a href="https://t.me/Mars_spb" class="tg-btn" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.17 13.35 4.23 12.4c-.643-.204-.657-.643.136-.953l11.057-4.261c.537-.194 1.006.131.471.035z"/></svg>
+            @Mars_spb
+          </a>
+          <a href="tel:+79811854161" class="tg-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.98 2.18 2 2 0 012.96.01h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            +7 981 185 4161
+          </a>
+          <a href="https://wa.me/79811854161" class="tg-btn" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 004.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm5.8 14.1c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.12.11-1.8-.11-.42-.13-.95-.31-1.64-.6-2.9-1.25-4.79-4.16-4.94-4.35-.14-.2-1.18-1.57-1.18-3 0-1.42.75-2.13 1.01-2.42.27-.29.58-.36.78-.36.2 0 .4 0 .57.01.18.01.43-.07.67.51.24.6.83 2.06.9 2.2.07.15.12.32.02.51-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.3-.13.6.17.29.75 1.24 1.62 2.01 1.11 1 2.05 1.3 2.34 1.45.29.15.46.13.63-.08.17-.2.72-.84.92-1.13.19-.29.39-.24.65-.14.27.1 1.7.8 1.99.95.29.15.48.22.55.34.07.13.07.71-.17 1.39z"/></svg>
+            WhatsApp
+          </a>
+          <span class="tg-btn" style="cursor:default" title="Мессенджер MAX">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="11"/></svg>
+            MAX
+          </span>
+          <a href="mailto:555ildar555@mail.ru" class="tg-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            555ildar555@mail.ru
+          </a>
+        </div>
+        <div class="contact-guarantee">
+          <svg class="contact-guarantee-ico" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2l1.9 5.7H18l-4.9 3.6 1.9 5.7L10 13.4l-4.9 3.6 1.9-5.7L2 7.7h6.1L10 2z"/></svg>
+          <p class="contact-guarantee-txt"><strong>Что будет после заявки:</strong> отвечу в течение 2 часов, предложу созвон на 30 минут. На созвоне — конкретные сроки и цена, не «от и до». Без навязчивых звонков и спама.</p>
+        </div>
+      </div>
+      <form class="form" id="cform" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="contact">
+        <p style="position:absolute;left:-9999px" aria-hidden="true"><label>Не заполняйте это поле: <input name="bot-field"></label></p>
+        <div class="fg"><label class="fl" for="fn">Как вас зовут</label><input class="fi" type="text" id="fn" name="name" placeholder="Иван Петров" autocomplete="name" required></div>
+        <div class="fg"><label class="fl" for="fc">Telegram или телефон</label><input class="fi" type="text" id="fc" name="contact" placeholder="@username или +7 999..." required></div>
+        <div class="fg">
+          <label class="fl" for="ft">Опишите задачу</label>
+          <textarea class="fta" id="ft" name="task" placeholder="Нужен сайт / бот / автоматизация... Что сейчас не работает так, как хотелось бы?" required></textarea>
+        </div>
+        <button type="submit" class="fsub" id="fsub">Отправить заявку →</button>
+        <p class="form-hint">Работаем по всей России · Ответ в течение 2 часов · Без спама</p>
+        <p id="fmsg" style="font-size:13px;color:var(--grn);display:none;margin-top:6px;text-align:center">✓ Заявка получена! Свяжусь с вами в течение 2 часов.</p>
+        <p id="ferr" style="font-size:13px;color:#F87171;display:none;margin-top:6px;text-align:center">Не получилось отправить. Напишите, пожалуйста, напрямую в Telegram @Mars_spb.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-i">
+      <div class="foot-brand">
+        <div class="foot-logo">
+          <svg width="28" height="28" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+            <rect width="36" height="36" rx="8" fill="#7C3AED"/>
+            <path d="M9.5 11l8.5 13.5L26.5 11" stroke="white" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="27" cy="24" r="3.5" stroke="white" stroke-width="2"/>
+            <line x1="29.5" y1="26.5" x2="31.5" y2="28.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="foot-nm">VELQO</span>
+        </div>
+        <span class="foot-sl">САЙТЫ · БОТЫ · АВТОМАТИЗАЦИИ</span>
+      </div>
+      <ul class="foot-links">
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#process">Процесс</a></li>
+        <li><a href="#portfolio">Работы</a></li>
+        <li><a href="#pricing">Цены</a></li>
+        <li><a href="#testimonials">Гарантии</a></li>
+        <li><a href="#contact">Контакт</a></li>
+      </ul>
+      <div class="foot-right">
+        <span class="foot-cp">© 2026 VELQO</span>
+        <span class="foot-geo">Работаем по всей России · Удалённо</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// NAV
+const nav=document.getElementById('nav');
+const ham=document.getElementById('ham');
+const nl=document.getElementById('nav-links');
+window.addEventListener('scroll',()=>nav.classList.toggle('on',scrollY>40),{passive:true});
+ham.addEventListener('click',()=>{const o=nl.classList.toggle('open');ham.setAttribute('aria-expanded',o)});
+nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nl.classList.remove('open');ham.setAttribute('aria-expanded','false')}));
+
+// CANVAS
+(function(){
+  const c=document.getElementById('cnv');
+  if(!c)return;
+  const x=c.getContext('2d');
+  let pts=[];
+  function resize(){c.width=c.offsetWidth;c.height=c.offsetHeight;init()}
+  function init(){
+    pts=[];
+    const n=Math.floor(c.width*c.height/12000);
+    for(let i=0;i<n;i++)pts.push({
+      x:Math.random()*c.width,y:Math.random()*c.height,
+      vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25,
+      r:Math.random()*1.2+.4,o:Math.random()*.4+.1
+    });
+  }
+  function draw(){
+    x.clearRect(0,0,c.width,c.height);
+    pts.forEach((p,i)=>{
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0)p.x=c.width;if(p.x>c.width)p.x=0;
+      if(p.y<0)p.y=c.height;if(p.y>c.height)p.y=0;
+      x.beginPath();x.arc(p.x,p.y,p.r,0,Math.PI*2);
+      x.fillStyle=`rgba(167,139,250,${p.o})`;x.fill();
+      for(let j=i+1;j<pts.length;j++){
+        const q=pts[j],d=Math.hypot(p.x-q.x,p.y-q.y);
+        if(d<110){x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);
+          x.strokeStyle=`rgba(124,58,237,${(1-d/110)*.18})`;x.lineWidth=.6;x.stroke()}
+      }
+    });
+    requestAnimationFrame(draw);
+  }
+  resize();draw();
+  let t;window.addEventListener('resize',()=>{clearTimeout(t);t=setTimeout(resize,150)},{passive:true});
+})();
+
+// DECODE
+(function(){
+  const CH='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&';
+  function decode(el,txt){
+    if(el._d)return;el._d=true;
+    const tot=txt.length*4;let i=0;
+    const iv=setInterval(()=>{
+      el.textContent=txt.split('').map((c,k)=>k<Math.floor(i/4)?c:CH[Math.floor(Math.random()*CH.length)]).join('');
+      i++;if(i>tot){el.textContent=txt;clearInterval(iv)}
+    },35);
+  }
+  const obs=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting&&!e.target._dec){e.target._dec=true;decode(e.target,e.target.dataset.decode)}
+  }),{threshold:.4});
+  document.querySelectorAll('[data-decode]').forEach(el=>obs.observe(el));
+})();
+
+// FORM (Netlify Forms — реальная отправка на почту владельца сайта)
+document.getElementById('cform').addEventListener('submit', function(e){
+  e.preventDefault();
+  const form = e.target;
+  const btn = document.getElementById('fsub');
+  const msg = document.getElementById('fmsg');
+  const err = document.getElementById('ferr');
+  btn.textContent = 'Отправляется...'; btn.disabled = true; err.style.display = 'none';
+  const data = new FormData(form);
+  fetch('/', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+    body: new URLSearchParams(data).toString()
+  }).then(res => {
+    if (!res.ok) throw new Error('bad status');
+    msg.style.display = 'block';
+    btn.textContent = 'Заявка отправлена ✓';
+    btn.style.background = '#059669';
+    form.reset();
+  }).catch(() => {
+    err.style.display = 'block';
+    btn.textContent = 'Отправить заявку →';
+    btn.disabled = false;
+  });
+});
+</script>
+</body>
+</html>
